@@ -1,11 +1,11 @@
-var knex = require('knex');
+// var knex = require('knex');
 
 
-exports.up = async function(knex,Promise) {
+exports.up = async function(knex, Promise) {
 
-    awaitknes.schema.createTable("users",table => {
+    await knex.schema.createTable("users",table => {
         table 
-        .increments('item')
+        .increments('user_id')
         .unsigned()
         .primary();
         table
@@ -23,6 +23,6 @@ exports.up = async function(knex,Promise) {
 
 };
 
-exports.down = async function(knex,Promise) {
+exports.down = async function (knex, Promise) {
     await knex.schema.dropTable('users');
 };

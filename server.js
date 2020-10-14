@@ -38,23 +38,23 @@ app.get("/item/:id", cors(), (req, res) => {
  });
 
 
-app.post("/item/:id", cors(), (req,res) => {
-  var id = req.params.id;
-  var name= req.params.names;
-  var price = req.params.price;
+// app.post("/item/:id", cors(), (req,res) => {
+//   var id = req.params.id;
+//   var name= req.params.names;
+//   var price = req.params.price;
 
 
-  db.query('INSERT INTO item (name,price) 
-  VALUES ($1,$2, $3);',
-  [ name, price],
-  (err,data) => {
-    if (err) {
-      res.status(500).send('product did not update');
-    } else {
-      res.json(data.rows);
-    }
-  });
-})
+//   db.query('INSERT INTO item (name,price) 
+//   VALUES ($1,$2, $3);',
+//   [ name, price],
+//   (err,data) => {
+//     if (err) {
+//       res.status(500).send('product did not update');
+//     } else {
+//       res.json(data.rows);
+//     }
+//   });
+// })
 
 app.delete("/items/:id", cors(), (req,res)=> {
   var id = req.params.id;
