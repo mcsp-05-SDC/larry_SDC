@@ -9,13 +9,18 @@ CREATE DATABASE fec;
 --     name text
 -- );
 
+
+
+DROP TABLE item;
+
 CREATE TABLE item(
     id serial PRIMARY KEY,
     name text,
     price text
 );
     
-
-
 \c fec ;
+
+
+
 
